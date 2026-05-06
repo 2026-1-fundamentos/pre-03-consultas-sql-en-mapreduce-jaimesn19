@@ -1,7 +1,7 @@
 # pylint: disable=broad-exception-raised
 # pylint: disable=import-error
 
-import mapreduce.run_mapreduce_job as run_mapreduce_job  # type: ignore
+from .mapreduce import hadoop as run_mapreduce_job  # type: ignore
 
 #
 # Columns:
@@ -143,38 +143,38 @@ def run():
     """Orquestador"""
 
     run_mapreduce_job(
-        mapper=mapper_query_1,
-        reducer=reducer_query_1,
-        input_directory="files/input",
-        output_directory="files/query_1",
+        mapper_fn=mapper_query_1,
+        reducer_fn=reducer_query_1,
+        input_folder="files/input/",
+        output_folder="files/query_1/",
     )
 
     run_mapreduce_job(
-        mapper=mapper_query_2,
-        reducer=reducer_query_2,
-        input_directory="files/input",
-        output_directory="files/query_2",
+        mapper_fn=mapper_query_2,
+        reducer_fn=reducer_query_2,
+        input_folder="files/input/",
+        output_folder="files/query_2/",
     )
 
     run_mapreduce_job(
-        mapper=mapper_query_3,
-        reducer=reducer_query_3,
-        input_directory="files/input",
-        output_directory="files/query_3",
+        mapper_fn=mapper_query_3,
+        reducer_fn=reducer_query_3,
+        input_folder="files/input/",
+        output_folder="files/query_3/",
     )
 
     run_mapreduce_job(
-        mapper=mapper_query_4,
-        reducer=reducer_query_4,
-        input_directory="files/input",
-        output_directory="files/query_4",
+        mapper_fn=mapper_query_4,
+        reducer_fn=reducer_query_4,
+        input_folder="files/input/",
+        output_folder="files/query_4/",
     )
 
     run_mapreduce_job(
-        mapper=mapper_query_5,
-        reducer=reducer_query_5,
-        input_directory="files/input",
-        output_directory="files/query_5",
+        mapper_fn=mapper_query_5,
+        reducer_fn=reducer_query_5,
+        input_folder="files/input/",
+        output_folder="files/query_5/",
     )
 
 
